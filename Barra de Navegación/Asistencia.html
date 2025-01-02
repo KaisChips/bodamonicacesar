@@ -1,17 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda de Mónica & César</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Menú de navegación -->
     <nav class="navbar">
         <ul class="menu">
-            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="/index.html">Inicio</a></li>
             <li><a href="/Barra de Navegación/Nuestra historia.html">Nuestra Historia</a></li>
             <li><a href="/Barra de Navegación/Detalles del Evento.html">Detalles del Evento</a></li>
             <li><a href="/Barra de Navegación/Asistencia.html">Asistencia</a></li>
@@ -19,17 +20,19 @@
         </ul>
     </nav>
 
-    <!-- Encabezado principal -->
-    <header id="inicio">
-        <div class="hero">
-            <h1>Mónica & César</h1>
-            <p>25 de octubre de 2025 | Barbastro</p>
-            <a href="#detalles" class="btn">Descubre nuestra boda</a>
-        </div>
-    </header>
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Boda de Mónica y César. Todos los derechos están reservados para CésarGay.</p>
-    </footer>
-</body>
-</html>
+   <!-- RSVP -->
+    <section id="asistencia" class="section">
+        <h2>Confirma tu asistencia</h2>
+        <form action="#" method="post">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="guests">Número de acompañantes</label>
+            <input type="number" id="guests" name="guests" min="0" required>
+
+            <label for="comments">Comentarios</label>
+            <textarea id="comments" name="comments"></textarea>
+
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
