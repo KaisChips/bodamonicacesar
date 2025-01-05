@@ -83,7 +83,7 @@ header .btn:hover {
     height: 100%; /* Asegura que la imagen ocupe todo el alto */
     padding-left: 0; /* Eliminar padding lateral izquierdo */
     padding-right: 0; /* Eliminar padding lateral derecho */
-    filter: grayscale(100%);
+    filter: grayscale(50%);
     transition: opacity 2s ease-in-out, transform 2s ease-in-out;
     opacity: 0;
     object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
