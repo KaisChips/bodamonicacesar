@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda de Mónica & César</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/Barra de Navegación/Nuestra historia.html">Nuestra Historia</a></li>
+            <li><a href="/Barra de Navegación/Detalles del Evento.html">Detalles del Evento</a></li>
+            <li><a href="/Barra de Navegación/Asistencia.html">Asistencia</a></li>
+            <li><a href="/Barra de Navegación/Cómo llegar y dónde hospedarse.html">Dónde hospedarse</a></li>
+        </ul>
+    </nav>
+    <section id="asistencia" class="section">
+        <h2>Confirma tu asistencia</h2>
+        <form action="#" method="post">
+            <!-- Nombre y apellidos -->
+            <label for="name">Nombre y Apellidos *</label>
+            <input type="text" id="name" name="name" required placeholder="Nombre y Apellidos">
+
+            <!-- Correo electrónico -->
+            <label for="email">Correo Electrónico *</label>
+            <input type="email" id="email" name="email" required placeholder="Correo Electrónico">
+
+            <!-- Dirección -->
+            <label for="address">Dirección *</label>
+            <input type="text" id="street" name="street" placeholder="Calle y número" required>
+            <input type="text" id="postal-code" name="postal-code" placeholder="Código Postal" required>
+            <input type="text" id="city" name="city" placeholder="Población" required>
+
+            <!-- Acompañante -->
+            <label for="companion">
+                ¿Vendrás con un acompañante?
+                <input type="checkbox" id="companion" name="companion">
+            </label>
+            <div id="companion-name-container" style="display: none;">
+                <label for="companion-name">Nombre del acompañante</label>
+                <input type="text" id="companion-name" name="companion-name">
+            </div>
+
+            <!-- Intolerancias -->
+            <label for="intolerances">¿Tienes alguna intolerancia o alergia alimentaria?</label>
+            <textarea id="intolerances" name="intolerances" placeholder="Especifica tus intolerancias, si tienes"></textarea>
+
+            <!-- Hospedaje en El Tozal -->
+            <label for="tozal">
+                ¿Estás interesado en hospedarte en la urbanización de El Tozal?
+                <input type="checkbox" id="tozal" name="tozal">
+            </label>
+
+            <!-- Vas a querer servicio de autobus-->
+            <label for="tozal">
+                ¿Vas a querer servicio de autobus?
+                <input type="checkbox" id="tozal" name="tozal">
+            </label>
+
+            <!-- Botón enviar -->
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <script>
+        // Mostrar/ocultar campo de nombre del acompañante
+        const companionCheckbox = document.getElementById('companion');
+        const companionNameContainer = document.getElementById('companion-name-container');
+
+        companionCheckbox.addEventListener('change', () => {
+            companionNameContainer.style.display = companionCheckbox.checked ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>
