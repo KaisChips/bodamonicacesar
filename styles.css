@@ -15,7 +15,7 @@ h1, h2, h3 {
 }
 
 .section {
-    padding: 2rem 5%; /* Reducir padding para móviles */
+    padding: 2rem 5%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.05);
 }
@@ -36,13 +36,13 @@ header {
 }
 
 header h1 {
-    font-size: 2rem; /* Ajustar tamaño de texto para móviles */
+    font-size: 2rem;
     margin: 0;
     color: #fff;
 }
 
 header p {
-    font-size: 1rem; /* Ajustar tamaño de texto para móviles */
+    font-size: 1rem;
     margin: 1rem 0 2rem;
     color: rgba(255, 255, 255, 0.8);
 }
@@ -63,32 +63,27 @@ header .btn:hover {
 /* Slider de imágenes */
 .slider {
     position: relative;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff; /* Color blanco para los laterales */
+    background-color: #fff;
 }
 
 .slider img {
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
-    height: 100%; /* Asegura que la imagen ocupe todo el alto */
-    padding-left: 0; /* Eliminar padding lateral izquierdo */
-    padding-right: 0; /* Eliminar padding lateral derecho */
-    filter: grayscale(50%);
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
     transition: opacity 2s ease-in-out, transform 2s ease-in-out;
     opacity: 0;
-    object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
-    object-position: center; /* Centra la imagen dentro del contenedor */
-    background-color: #fff; /* Asegura que los lados sean blancos */
+    object-fit: cover;
+    background-color: #fff;
 }
 
 .slider img.active {
@@ -99,11 +94,11 @@ header .btn:hover {
 /* Controles del slider */
 .slider .controls {
     position: absolute;
-    bottom: 5%; /* Reducir espacio para móviles */
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 0.5rem; /* Ajustar espacio entre botones */
+    gap: 0.5rem;
     z-index: 5;
 }
 
@@ -111,12 +106,11 @@ header .btn:hover {
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     border: none;
-    padding: 0.3rem 0.8rem; /* Ajustar tamaño del botón */
+    padding: 0.3rem 0.8rem;
     cursor: pointer;
     font-size: 0.9rem;
     border-radius: 0;
     transition: background-color 0.3s;
-    z-index: 5;
 }
 
 .slider .controls button:hover {
@@ -135,13 +129,13 @@ header .btn:hover {
 }
 
 .slider .text-overlay h1 {
-    font-size: 1.8rem; /* Ajustar tamaño de texto */
+    font-size: 1.8rem;
     margin: 0;
     color: #fff;
 }
 
 .slider .text-overlay p {
-    font-size: 1rem; /* Ajustar tamaño de texto */
+    font-size: 1rem;
     margin: 1rem 0 2rem;
     color: rgba(255, 255, 255, 0.8);
 }
@@ -169,37 +163,87 @@ header .btn:hover {
     z-index: 1000;
     height: 3.5rem;
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-}
-
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    padding: 0;
 }
 
-.navbar li {
-    margin: 0 1rem;
+/* Botón del menú desplegable */
+.menu-toggle {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
 }
 
-.navbar a {
+.menu-toggle img {
+    height: 4rem; /* Incrementa el tamaño de la imagen al doble */
+    width: 4rem;
+    border-radius: 50%; /* Hace el contorno circular */
+}
+
+/* Estilos del menú */
+.menu {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 999;
+    list-style: none;
+    margin: 0;
+}
+
+.menu li {
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.menu a {
     text-decoration: none;
     font-size: 1rem;
     color: #000;
     padding: 0.6rem 1rem;
+    display: block;
+    text-align: center;
     transition: color 0.3s, background-color 0.3s;
 }
 
-.navbar a:hover {
+.menu a:hover {
     color: #fff;
     background-color: rgba(0, 0, 0, 1);
-    box-shadow: inset 0 -2px 0 rgba(255, 255, 255, 0.2);
-    border-radius: 0;
+}
+
+/* Estado visible del menú */
+.menu.show {
+    display: flex;
+}
+
+/* Menú para pantallas grandes */
+@media (min-width: 768px) {
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: static;
+        box-shadow: none;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu li {
+        margin: 0 1rem;
+    }
+
+    .menu a {
+        padding: 0;
+    }
 }
 
 /* Footer */
@@ -208,7 +252,7 @@ footer {
     padding: 1.5rem;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
-    font-size: 0.8rem; /* Reducir tamaño de fuente */
+    font-size: 0.8rem;
 }
 
 /* Media Queries */
