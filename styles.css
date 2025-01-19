@@ -400,75 +400,101 @@ h1, h2, h3 {
     position: relative;
     filter: grayscale(100%);  /* Aplica escala de grises */
 }
-
-/* Línea temporal vertical */
-#como-nos-conocidos .timeline {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    height: 100%;
-    width: 3px;  /* Línea de 3px de grosor */
-    background-color: #6c757d;  /* Gris claro */
-    transform: translateX(-50%);
-    margin: 0; /* Sin márgenes */
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f8f9fa;
 }
 
-/* Estilos para los elementos de la línea temporal */
-#como-nos-conocidos .timeline-item {
-    position: relative;
-    margin-left: 60%; /* Mueve los elementos a la derecha */
-    padding-left: 3rem;  /* Añade espacio entre la línea temporal y el contenido */
-    margin-bottom: 4rem; /* Añadido mayor espacio entre los elementos */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #343a40;
+}
+
+.section {
+    padding: 2rem 10%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Estilo para "Nuestra Historia" */
+#como-nos-conocidos {
+    padding: 3rem 5%;
+    background-color: #fff;
     text-align: left;
 }
 
-/* Estilos para el encabezado */
 #como-nos-conocidos h1 {
-    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
     color: #343a40;
-    margin-bottom: 2rem;
+    text-align: center;
 }
 
-/* Párrafos dentro de la sección */
 #como-nos-conocidos p {
     font-size: 1.2rem;
     color: #495057;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Línea temporal */
+.timeline {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.timeline-item {
     margin-bottom: 2rem;
-}
-
-/* Estilos para el botón */
-#como-nos-conocidos .btn {
-    padding: 1rem 1.5rem;
-    background-color: #6c757d; /* Gris para el botón */
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-left: 4px solid #6c757d;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
-    transition: background-color 0.3s;
-    margin-top: 3rem; /* Separación del contenido anterior */
 }
 
-#como-nos-conocidos .btn:hover {
-    background-color: #5a6268;
+.timeline-item h2 {
+    font-size: 1.8rem;
+    color: #343a40;
+    margin-bottom: 0.5rem;
 }
 
-/* Asegurar que los elementos se ajusten adecuadamente en pantallas más pequeñas */
+.timeline-item p {
+    font-size: 1.2rem;
+    color: #495057;
+    margin: 0;
+}
+
+/* Adaptaciones para pantallas pequeñas */
 @media (max-width: 768px) {
-    #como-nos-conocidos .timeline {
-        left: 5%;
-        width: 2px;  /* Línea más delgada en pantallas pequeñas */
-    }
-
-    #como-nos-conocidos .timeline-item {
-        margin-left: 0%;
-        padding-left: 2rem; /* Menos espacio entre los elementos */
+    #como-nos-conocidos {
+        padding: 2rem;
     }
 
     #como-nos-conocidos h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     #como-nos-conocidos p {
+        font-size: 1rem;
+    }
+
+    .timeline-item {
+        padding: 1rem;
+    }
+
+    .timeline-item h2 {
+        font-size: 1.5rem;
+    }
+
+    .timeline-item p {
         font-size: 1rem;
     }
 }
