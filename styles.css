@@ -64,32 +64,41 @@ header .btn:hover {
 .slider {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 4rem); /* Altura ajustada para ocupar todo el espacio entre la barra de navegación y el footer */
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #e9ecef; /* Ajustado fondo */
+    padding-top: 2rem; /* Margen superior respecto a la barra de navegación */
+    padding-bottom: 2rem; /* Margen inferior respecto al footer */
+    box-sizing: border-box; /* Asegurando que el padding no afecte las dimensiones del box */
+}
+
+.slider .box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Recortar el contenido que se extienda fuera del box */
+    position: absolute; /* Asegurar superposición */
+    box-sizing: border-box; /* Asegurando que el padding no afecte las dimensiones del box */
 }
 
 .slider img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 4rem);
-    height: calc(100% - 4rem);
-    filter: grayscale(40%); /* Ajustado filtro */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajustado para cubrir la caja */
+    position: absolute; /* Asegurar que las imágenes se superponen correctamente */
     transition: opacity 2s ease-in-out, transform 2s ease-in-out;
     opacity: 0;
-    object-fit: cover;
     background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añadido sombreado ligero */
 }
 
 .slider img.active {
     opacity: 1;
-    z-index: -1;
+    z-index: 1;
 }
 
 /* Controles del slider */
@@ -363,7 +372,7 @@ form .btn {
 }
 
 form .btn:hover {
-    background-color: #0056b3;
+    background-color: #333;
 }
 
 #companion-name-container {
