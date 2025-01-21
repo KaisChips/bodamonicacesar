@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,6 +6,31 @@
     <title>Boda de Mónica & César</title>
     <link rel="stylesheet" href="/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .details-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            border-left: 1px solid #ccc;
+        }
+        .detail {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .detail h3 {
+            margin-top: 0;
+        }
+        .separator {
+            border-left: 2px solid #ccc;
+            height: auto;
+            margin: 0 20px;
+        }
+    </style>
 </head>
 <body>
     <!-- Menú de navegación -->
@@ -30,6 +54,7 @@
                 <p>Hora: 12:00 PM</p>
                 <a href="https://goo.gl/maps" target="_blank">Ver en Google Maps</a>
             </div>
+            <div class="separator"></div>
             <div class="detail">
                 <h3>Recepción</h3>
                 <p>Hotel Rey Sancho Ramírez</p>
@@ -38,3 +63,10 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Boda de Mónica & César. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

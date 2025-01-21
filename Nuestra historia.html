@@ -22,52 +22,69 @@
         </ul>
     </nav>
 
-    <!-- Sección de línea temporal -->
-    <section id="como-nos-conocidos" class="section">
+    <!-- Sección de galería estilo Instagram -->
+    <section id="gallery" class="section">
         <h1>Nuestra Historia</h1>
         <p>Una línea temporal de cómo nos conocimos y nuestra historia juntos.</p>
 
-        <!-- Línea temporal vertical -->
-        <div class="timeline">
-            <!-- Primer evento -->
-            <div class="timeline-item">
-                <h2>Primer Encuentro</h2>
-                <p>Nos conocimos en una fiesta en Madrid...</p>
+        <!-- Galería de fotos estilo Instagram -->
+        <div class="gallery">
+            <!-- Foto 1 -->
+            <div class="gallery-item">
+                <img src="Fotos/003laus_vendimia_Easy-Resize.com_-768x512.jpg" alt="Primer Encuentro" class="gallery-image">
+                <div class="gallery-date">2015</div>
+                <div class="gallery-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae metus libero.</div>
             </div>
-            <!-- Segundo evento -->
-            <div class="timeline-item">
-                <h2>Primera Cita</h2>
-                <p>Después de varias semanas, tuvimos nuestra primera cita...</p>
+            <!-- Foto 2 -->
+            <div class="gallery-item">
+                <img src="Fotos/003laus_vendimia_Easy-Resize.com_-768x512.jpg" alt="Primera Cita" class="gallery-image">
+                <div class="gallery-date">2016</div>
+                <div class="gallery-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae metus libero.</div>
             </div>
-            <!-- Tercer evento -->
-            <div class="timeline-item">
-                <h2>Compromiso</h2>
-                <p>El día más especial de nuestras vidas...</p>
+            <!-- Foto 3 -->
+            <div class="gallery-item">
+                <img src="Fotos/003laus_vendimia_Easy-Resize.com_-768x512.jpg" alt="Compromiso" class="gallery-image">
+                <div class="gallery-date">2018</div>
+                <div class="gallery-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae metus libero.</div>
             </div>
-            <!-- Más eventos -->
-            <div class="timeline-item">
-                <h2>2015</h2>
-                <p>Primera vez que nos cruzamos en el campus universitario.</p>
+            <!-- Más fotos -->
+            <div class="gallery-item">
+                <img src="Fotos/003laus_vendimia_Easy-Resize.com_-768x512.jpg" alt="2015" class="gallery-image">
+                <div class="gallery-date">2015</div>
+                <div class="gallery-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae metus libero.</div>
             </div>
-            <div class="timeline-item">
-                <h2>2016</h2>
-                <p>Colaboramos en nuestro primer proyecto juntos.</p>
+            <div class="gallery-item">
+                <img src="Fotos/003laus_vendimia_Easy-Resize.com_-768x512.jpg" alt="2016" class="gallery-image">
+                <div class="gallery-date">2016</div>
+                <div class="gallery-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae metus libero.</div>
             </div>
-            <div class="timeline-item">
-                <h2>2018</h2>
-                <p>El día que aceptaste ir a nuestra primera cita.</p>
+            <div class="gallery-item">
+                <img src="Fotos/003laus_vendimia_Easy-Resize.com_-768x512.jpg" alt="2018" class="gallery-image">
+                <div class="gallery-date">2018</div>
+                <div class="gallery-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae metus libero.</div>
             </div>
-            <div class="timeline-item">
-                <h2>2020</h2>
-                <p>Nos comprometimos durante un atardecer mágico en la playa.</p>
+            <div class="gallery-item">
+                <img src="Fotos/003laus_vendimia_Easy-Resize.com_-768x512.jpg" alt="2020" class="gallery-image">
+                <div class="gallery-date">2020</div>
+                <div class="gallery-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae metus libero.</div>
             </div>
-            <div class="timeline-item">
-                <h2>2023</h2>
-                <p>Planificamos nuestra boda rodeados de familiares y amigos.</p>
+            <div class="gallery-item">
+                <img src="Fotos/003laus_vendimia_Easy-Resize.com_-768x512.jpg" alt="2023" class="gallery-image">
+                <div class="gallery-date">2023</div>
+                <div class="gallery-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae metus libero.</div>
             </div>
         </div>
     </section>
 
-    <script src="Línea de tiempo.js"></script>
+    <!-- Modal para ampliar fotos -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-container">
+            <img class="modal-content" id="modal-image">
+            <div id="modal-caption"></div> <!-- Asegurarse de que el caption esté debajo de la imagen -->
+        </div>
+    </div>
+
+    <script src="gallery.js"></script>
 </body>
 </html>
