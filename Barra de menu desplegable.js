@@ -3,31 +3,27 @@ const menuToggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
 const menuLinks = document.querySelectorAll('.menu a');
 
-// Evento para alternar el menú al hacer clic
-menuToggle.addEventListener('click', () => {
+// Evento para alternar el menú al hacer clic en el icono
+menuToggle.addEventListener('click', (event) => {
+    event.stopPropagation(); // Evita que el evento se propague y cierre el menú inmediatamente
     menu.classList.toggle('show');
 });
 
-// Evento para mostrar el menú al pasar el ratón por encima del logo
-menuToggle.addEventListener('mouseover', () => {
-    menu.classList.add('show');
-});
-
-// Evento para ocultar el menú al sacar el ratón del logo
-menuToggle.addEventListener('mouseout', () => {
-    menu.classList.remove('show');
-});
-
-// Asegurar que el menú se oculte al hacer clic fuera de él (dispositivos pequeños)
+// Cerrar el menú si se hace clic fuera de él
 document.addEventListener('click', (event) => {
-    if (!menuToggle.contains(event.target) && !menu.contains(event.target)) {
+    if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
         menu.classList.remove('show');
     }
 });
 
-// Asegurar que los enlaces dentro del menú permitan la navegación
+// Permitir la navegación y cerrar el menú al hacer clic en un enlace
 menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        menu.classList.remove('show'); // Ocultar el menú después de hacer clic en un enlace
+    link.addEventListener('click', (event) => {
+        menu.classList.remove('show'); // Ocultar el menú después de hacer clic
+        // Asegurar que el enlace navegue correctamente
+        const href = link.getAttribute('href');
+        if (href && href !== "#") {
+            window.location.href = href;
+        }
     });
 });
