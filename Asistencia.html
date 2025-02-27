@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda de Mónica & César</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles_asistencia.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Menú de navegación -->
     <nav class="navbar">
         <div class="menu-toggle">
-            <img src="Fotos/Logo Boda 04.jpg" alt="Logo de menú">
+            <img src="Fotos/foto menu.png" alt="Foto del menú">
+        </div>
+        <div class="logo">
+            <img src="Fotos/Logo Boda 04.png" alt="Logo de boda">
         </div>
         <ul class="menu">
             <li><a href="index.html">Inicio</a></li>
@@ -21,6 +24,7 @@
             <li><a href="Cómo llegar y dónde hospedarse.html">Dónde hospedarse</a></li>
         </ul>
     </nav>
+    
     <section id="asistencia" class="section">
         <h2>Confirma tu asistencia</h2>
         <form action="#" method="post">
@@ -40,17 +44,13 @@
 
             <!-- Acompañante -->
             <label for="companion">
-                ¿Vendrás con un acompañante?
+                ¿Vendrás con acompañante?
                 <input type="checkbox" id="companion" name="companion">
             </label>
             <div id="companion-name-container" style="display: none;">
                 <label for="companion-name">Nombre del acompañante</label>
                 <input type="text" id="companion-name" name="companion-name">
             </div>
-
-            <!-- Intolerancias -->
-            <label for="intolerances">¿Tienes alguna intolerancia o alergia alimentaria?</label>
-            <textarea id="intolerances" name="intolerances" placeholder="Especifica tus intolerancias, si tienes"></textarea>
 
             <!-- Hospedaje en El Tozal -->
             <label for="tozal">
@@ -63,6 +63,22 @@
                 ¿Vas a querer servicio de autobus?
                 <input type="checkbox" id="tozal" name="tozal">
             </label>
+
+            <!-- Vas a venir a la preboda-->
+            <label for="tozal">
+                ¿Vas a venir a la preboda?
+                <input type="checkbox" id="tozal" name="tozal">
+            </label>
+
+            <!-- Asistirás a la postboda-->
+            <label for="tozal">
+                ¿Asistirás a la postboda?
+                <input type="checkbox" id="tozal" name="tozal">
+            </label>
+
+            <!-- Intolerancias -->
+            <label for="intolerances">¿Tienes alguna intolerancia o alergia alimentaria?</label>
+            <textarea id="intolerances" name="intolerances" placeholder="Especifica tus intolerancias, si tienes"></textarea>
 
             <!-- Botón enviar -->
             <button type="submit" class="btn">Enviar</button>
@@ -78,6 +94,5 @@
             companionNameContainer.style.display = companionCheckbox.checked ? 'block' : 'none';
         });
     </script>
-    <script src="Barra de menu desplegable.js"></script>
 </body>
 </html>
