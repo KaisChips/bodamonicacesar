@@ -4,94 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda de Mónica & César</title>
-    <link rel="stylesheet" href="styles_asistencia.css">
+    <link rel="stylesheet" href="/styles_asistencia.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Menú de navegación -->
     <nav class="navbar">
         <div class="menu-toggle">
-            <img src="Fotos/foto menu.png" alt="Foto del menú">
+            <img src="Fotos/foto_menu.png" alt="Foto del menú">
         </div>
         <div class="logo">
-            <img src="Fotos/Logo Boda 04.png" alt="Logo de boda">
+            <img src="Fotos/Logo_Boda_04.png" alt="Logo de boda">
         </div>
         <ul class="menu">
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="Nuestra historia.html">Nuestra Historia</a></li>
-            <li><a href="Detalles del Evento.html">Detalles del Evento</a></li>
+            <li><a href="Nuestra_historia.html">Nuestra Historia</a></li>
+            <li><a href="Detalles_del_Evento.html">Detalles del Evento</a></li>
             <li><a href="Asistencia.html">Asistencia</a></li>
-            <li><a href="Cómo llegar y dónde hospedarse.html">Dónde hospedarse</a></li>
+            <li><a href="Como_llegar_y_donde_hospedarse.html">Dónde hospedarse</a></li>
         </ul>
     </nav>
     
     <section id="asistencia" class="section">
         <h2>Confirma tu asistencia</h2>
-        <form action="#" method="post">
-            <!-- Nombre y apellidos -->
+        <form id="weddingForm">
             <label for="name">Nombre y Apellidos *</label>
             <input type="text" id="name" name="name" required placeholder="Nombre y Apellidos">
 
-            <!-- Correo electrónico -->
             <label for="email">Correo Electrónico *</label>
             <input type="email" id="email" name="email" required placeholder="Correo Electrónico">
 
-            <!-- Dirección -->
-            <label for="address">Dirección *</label>
-            <input type="text" id="street" name="street" placeholder="Calle y número" required>
-            <input type="text" id="postal-code" name="postal-code" placeholder="Código Postal" required>
-            <input type="text" id="city" name="city" placeholder="Población" required>
-
-            <!-- Acompañante -->
-            <label for="companion">
-                ¿Vendrás con acompañante?
-                <input type="checkbox" id="companion" name="companion">
-            </label>
+            <fieldset>
+                <legend>Dirección *</legend>
+                <input type="text" id="street" name="street" placeholder="Calle y número" required>
+                <input type="text" id="postal-code" name="postal_code" placeholder="Código Postal" required>
+                <input type="text" id="city" name="city" placeholder="Población" required>
+            </fieldset>
+            
+            <label for="companion">¿Vendrás con acompañante?</label>
+            <input type="checkbox" id="companion" name="companion">
             <div id="companion-name-container" style="display: none;">
                 <label for="companion-name">Nombre del acompañante</label>
-                <input type="text" id="companion-name" name="companion-name">
+                <input type="text" id="companion-name" name="companion_name">
             </div>
 
-            <!-- Hospedaje en El Tozal -->
-            <label for="tozal">
-                ¿Estás interesado en hospedarte en la urbanización de El Tozal?
-                <input type="checkbox" id="tozal" name="tozal">
-            </label>
+            <label for="hospedaje_tozal">¿Estás interesado en hospedarte en la urbanización de El Tozal?</label>
+            <input type="checkbox" id="hospedaje_tozal" name="tozal">
 
-            <!-- Vas a querer servicio de autobus-->
-            <label for="tozal">
-                ¿Vas a querer servicio de autobus?
-                <input type="checkbox" id="tozal" name="tozal">
-            </label>
+            <label for="bus">¿Vas a querer servicio de autobús?</label>
+            <input type="checkbox" id="bus" name="bus">
 
-            <!-- Vas a venir a la preboda-->
-            <label for="tozal">
-                ¿Vas a venir a la preboda?
-                <input type="checkbox" id="tozal" name="tozal">
-            </label>
+            <label for="preboda">¿Vas a venir a la preboda?</label>
+            <input type="checkbox" id="preboda" name="preboda">
 
-            <!-- Asistirás a la postboda-->
-            <label for="tozal">
-                ¿Asistirás a la postboda?
-                <input type="checkbox" id="tozal" name="tozal">
-            </label>
+            <label for="postboda">¿Asistirás a la postboda?</label>
+            <input type="checkbox" id="postboda" name="postboda">
 
-            <!-- Intolerancias -->
             <label for="intolerances">¿Tienes alguna intolerancia o alergia alimentaria?</label>
             <textarea id="intolerances" name="intolerances" placeholder="Especifica tus intolerancias, si tienes"></textarea>
 
-            <!-- Botón enviar -->
             <button type="submit" class="btn">Enviar</button>
         </form>
     </section>
 
     <script>
-        // Mostrar/ocultar campo de nombre del acompañante
-        const companionCheckbox = document.getElementById('companion');
-        const companionNameContainer = document.getElementById('companion-name-container');
+        document.getElementById("weddingForm").addEventListener("submit", function (event) {
+            event.preventDefault();
 
-        companionCheckbox.addEventListener('change', () => {
-            companionNameContainer.style.display = companionCheckbox.checked ? 'block' : 'none';
+            let formData = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                street: document.getElementById("street").value,
+                postal_code: document.getElementById("postal-code").value,
+                city: document.getElementById("city").value,
+                companion: document.getElementById("companion").checked,
+                companion_name: document.getElementById("companion-name").value || "",
+                tozal: document.getElementById("hospedaje_tozal").checked,
+                bus: document.getElementById("bus").checked,
+                preboda: document.getElementById("preboda").checked,
+                postboda: document.getElementById("postboda").checked,
+                intolerances: document.getElementById("intolerances").value
+            };
+
+            fetch("https://script.google.com/macros/s/AKfycbxMvjJGQTcooBK4cEG5G_FNuBIBis2Rt1tNdK43mlF49lcF65ZNYXPvu0zIgwiRo6Sp/exec", {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            }).then(() => {
+                alert("¡Formulario enviado con éxito!");
+                document.getElementById("weddingForm").reset();
+            }).catch(error => console.error("Error:", error));
+        });
+
+        document.getElementById('companion').addEventListener('change', function () {
+            document.getElementById('companion-name-container').style.display = this.checked ? 'block' : 'none';
         });
     </script>
 </body>
