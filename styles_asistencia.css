@@ -23,6 +23,28 @@ header {
     padding: 0;
 }
 
+/* Estilo para "Asistencia" */
+#asistencia {
+    padding: 3rem 5%;
+    background-color: #fff;
+    text-align: left;
+}
+#asistencia h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #343a40;
+    text-align: center;
+}
+#asistencia p {
+    font-size: 1.2rem;
+    color: #495057;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Formulario */
 form {
     max-width: 600px;
@@ -86,6 +108,8 @@ form .btn:hover {
     display: none;
     margin-top: 1rem;
 }
+
+
 /* Barra de navegación */
 .navbar {
     position: fixed;
@@ -170,21 +194,12 @@ form .btn:hover {
         display: flex;
     }
 
-    .slider {
-        height: auto;
-    }
-
-    .slider img {
-        width: 100%;
-        height: auto;
-    }
-
-    .slider .text-overlay h1 {
-        font-size: 2rem;
-    }
-
-    .slider .text-overlay p {
-        font-size: 1rem;
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 
@@ -193,7 +208,7 @@ footer {
     text-align: center;
     padding: 2rem;
     background-color: #212529;
-    color: #ffffff00;
+    color: #fff;
     font-size: 1rem;
     position: absolute;
     bottom: 0;
