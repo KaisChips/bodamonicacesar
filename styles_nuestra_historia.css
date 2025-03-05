@@ -109,8 +109,8 @@ header {
     padding: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
-    max-width: 70vw; /* Fondo con un borde del 15% */
-    max-height: 70vh; /* Borde también en la parte superior e inferior */
+    max-width: 70vw;
+    max-height: 70vh;
     overflow: auto;
     display: flex;
     flex-direction: column;
@@ -121,12 +121,12 @@ header {
 .modal-content {
     width: 100%;
     height: auto;
-    max-height: 50vh; /* Limitar altura para dejar espacio al texto */
+    max-height: 50vh;
     object-fit: contain;
     margin: auto;
 }
 #modal-caption {
-    max-width: 100%; /* Que el texto ocupe el ancho del modal-container */
+    max-width: 100%;
     text-align: center;
     color: #333;
     padding: 1rem;
@@ -148,6 +148,31 @@ header {
 .close:hover, .close:focus {
     color: #000;
     text-decoration: none;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .modal-container {
+        max-width: 90vw;
+        max-height: 90vh;
+        padding: 1rem;
+    }
+
+    .modal-content {
+        max-height: 40vh;
+    }
+
+    #modal-caption {
+        max-height: 40vh;
+        overflow-y: auto;
+        font-size: 1rem;
+    }
+
+    .close {
+        top: 10px;
+        right: 10px;
+        font-size: 25px;
+    }
 }
 
 /* Barra de navegación */
