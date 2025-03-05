@@ -6,6 +6,8 @@ body {
     padding: 0;
     color: #333;
     background-color: #fff;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Encabezado principal */
@@ -21,6 +23,7 @@ header {
     position: relative;
     overflow: hidden;
     padding: 0;
+    width: 100%;
 }
 
 /* Slider de imágenes */
@@ -95,6 +98,7 @@ header {
     background-color: rgba(0, 0, 0, 0.3);
     padding: 1rem;
     border-radius: 10px;
+    max-width: 90%;
 }
 
 .slider .text-overlay h1 {
@@ -136,29 +140,6 @@ header {
     padding: 0 1rem;
 }
 
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.logo img {
-    height: 3rem;
-    object-fit: contain;
-}
-
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-}
-
-.menu-toggle img {
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
-}
-
 .menu {
     display: flex;
     justify-content: center;
@@ -166,10 +147,7 @@ header {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.menu li {
-    margin: 0 1rem;
+    width: 100%;
 }
 
 .menu a {
@@ -205,12 +183,13 @@ header {
         display: flex;
     }
 
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        left: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
+    .slider {
+        height: auto;
+    }
+
+    .slider img {
+        width: 100%;
+        height: auto;
     }
 
     .slider .text-overlay h1 {
@@ -219,10 +198,6 @@ header {
 
     .slider .text-overlay p {
         font-size: 1rem;
-    }
-
-    .slider .text-overlay .btn {
-        white-space: nowrap;
     }
 }
 
@@ -236,4 +211,5 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+    z-index: 5;
 }

@@ -97,32 +97,9 @@ form .btn:hover {
     z-index: 10;
     height: 4rem;
     display: flex;
-    justify-content: center; /* Centramos el contenido */
-    align-items: center;
-    padding: 0 1rem;
-}
-
-.logo {
-    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-}
-
-.logo img {
-    height: 3rem;
-    object-fit: contain;
-}
-
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-}
-
-.menu-toggle img {
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
+    padding: 0 1rem;
 }
 
 .menu {
@@ -132,10 +109,7 @@ form .btn:hover {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.menu li {
-    margin: 0 1rem;
+    width: 100%;
 }
 
 .menu a {
@@ -171,12 +145,13 @@ form .btn:hover {
         display: flex;
     }
 
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        left: 1rem; /* Lo mueve a la izquierda */
-        top: 50%;
-        transform: translateY(-50%);
+    .slider {
+        height: auto;
+    }
+
+    .slider img {
+        width: 100%;
+        height: auto;
     }
 
     .slider .text-overlay h1 {
@@ -198,4 +173,5 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+    z-index: 5;
 }
