@@ -1,0 +1,214 @@
+/* Estilos generales */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    color: #212529;
+    background-color: #fff;
+    width: 100%;
+    overflow-x: hidden;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.section {
+    padding: 50px 20px;
+    border-bottom: 2px solid #ced4da; /* Línea más clara */
+    width: 100%;
+}
+
+.preboda, .itinerario-autobuses, .postboda {
+    width: 100%;
+}
+
+.ceremonia-banquete {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    gap: 20px;
+    position: relative;
+}
+
+.ceremonia {
+    width: 48%;
+    text-align: center;
+    padding: 40px;
+    border-right: 2px solid #ced4da; /* Línea más clara */
+}
+
+.banquete {
+    width: 48%;
+    text-align: center;
+    padding: 40px;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #212529;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #212529;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ceremonia-banquete {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ceremonia, .banquete {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #ced4da; /* Línea más clara */
+    }
+}
+
+.boton-reserva {
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px; /* Esquinas menos redondeadas */
+    transition: all 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    width: 30%; /* Ajustar el ancho del botón para que sea igual a la longitud de las líneas divisorias */
+    text-align: center;
+}
+
+.boton-reserva:hover {
+    background-color: #212529;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    height: 3rem;
+    object-fit: contain;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 1rem;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #343a40;
+    padding: 0.6rem 1rem;
+    display: block;
+    text-align: center;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.menu a:hover {
+    color: #fff;
+    background-color: #343a40;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 1rem;
+    }
+    
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .menu.show {
+        display: flex;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .logo img {
+        height: 2.5rem;
+    }
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #212529;
+    color: #fff;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

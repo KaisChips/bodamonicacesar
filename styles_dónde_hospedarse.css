@@ -1,0 +1,318 @@
+/* Estilos generales */
+body {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+    width: 100%;
+    overflow-x: hidden;
+    padding-bottom: 5%;
+}
+
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-top: 6rem; /* Espacio para navbar fija */
+}
+
+/* Estructura de hoteles */
+.hotel {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.imagen {
+    flex: 0 0 50%;
+    max-width: 600px;
+}
+
+.imagen img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nombre-hotel {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #343a40;
+}
+
+.ubicacion {
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.enlace-maps {
+    color: #495057;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.enlace-maps:hover {
+    color: #212529;
+    text-decoration: underline;
+}
+
+.precio {
+    font-size: 1.8rem;
+    color: #212529;
+    margin: 1.5rem 0;
+    font-weight: 700;
+}
+
+.texto-pequeno {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.boton-reserva {
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.boton-reserva:hover {
+    background-color: #212529;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+/* Estilos del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex; /* Importante: activa el modelo flexbox */
+}
+
+
+.modal-contenido {
+    background: white;
+    padding: 2rem;
+    width: 60%;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.contenedor-habitaciones {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.habitacion {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.habitacion img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.habitacion h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.precio {
+    font-size: 1.4rem;
+    color: #212529;
+    font-weight: bold;
+}
+
+/* Barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    height: 3rem;
+    object-fit: contain;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 1rem;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #343a40;
+    padding: 0.6rem 1rem;
+    display: block;
+    text-align: center;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.menu a:hover {
+    color: #fff;
+    background-color: #343a40;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hotel {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    
+    .imagen {
+        order: -1;
+        flex: none;
+        width: 100%;
+    }
+    
+    .imagen img {
+        height: 250px;
+    }
+    
+    .navbar {
+        padding: 0 1rem;
+    }
+    
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .menu.show {
+        display: flex;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .logo img {
+        height: 2.5rem;
+    }
+    
+    .nombre-hotel {
+        font-size: 1.8rem;
+    }
+    
+    .contenedor-principal {
+        padding: 1rem;
+        padding-top: 5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .boton-reserva {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .precio {
+        font-size: 1.5rem;
+    }
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #212529;
+    color: #fff;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}

@@ -8,6 +8,7 @@ body {
     background-color: #fff;
     width: 100%;
     overflow-x: hidden;
+    padding-bottom: 5%;
 }
 
 /* Encabezado principal */
@@ -197,7 +198,7 @@ header {
         flex-direction: column;
         background-color: rgba(255, 255, 255, 0.95);
         position: absolute;
-        top: 4rem;
+        top: 3rem;
         left: 0;
         width: 100%;
         padding: 1rem 0;
@@ -224,7 +225,7 @@ footer {
     background-color: #212529;
     color: #fff;
     font-size: 1rem;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
