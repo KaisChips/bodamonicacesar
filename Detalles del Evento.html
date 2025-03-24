@@ -4,51 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda de Mónica & César</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="styles_detalles_del_evento.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <!-- Menú de navegación -->
     <nav class="navbar">
         <div class="menu-toggle">
-            <img src="Fotos/Logo Boda 04.jpg" alt="Logo de menú">
+            <img src="Fotos/foto menu.png" alt="Foto del menú">
+        </div>
+        <div class="logo">
+            <img src="Fotos/Logo Boda 04.png" alt="Logo de boda">
         </div>
         <ul class="menu">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="Nuestra historia.html">Nuestra Historia</a></li>
             <li><a href="Detalles del Evento.html">Detalles del Evento</a></li>
             <li><a href="Asistencia.html">Asistencia</a></li>
-            <li><a href="Cómo llegar y dónde hospedarse.html">Dónde hospedarse</a></li>
+            <li><a href="Dónde hospedarse.html">Dónde hospedarse</a></li>
         </ul>
     </nav>
+    
+    <div class="container">
+        <!-- Preboda -->
+        <div class="section" id="preboda">
+            <h2>Preboda</h2>
+            <img src="/Fotos/preboda.png" alt="Imagen de la Preboda">
+            <p>La preboda será en el Benasque del Tozal a las 20:30. Se harán unos arroces.</p>
+            <p><strong>Código de vestimenta:</strong> Blazer/chaqueta para los hombres y vestido largo para las mujeres.</p>
+        </div>
 
-    <!-- Detalles del evento -->
-    <section id="detalles" class="section">
-        <h2>Detalles del Evento</h2>
-        <div class="details-container">
-            <div class="detail">
-                <h3>Ceremonia</h3>
-                <p>Santuario de Torreciudad</p>
-                <p>Hora: 12:30 PM</p>
-                <a href="https://goo.gl/maps" target="_blank">Ver en Google Maps</a>
+        <!-- Ceremonia y Banquete en una misma línea -->
+        <div class="ceremonia-banquete">
+            <div class="section ceremonia">
+                <h2>Ceremonia</h2>
+                <img src="/Fotos/ceremonia.png" alt="Imagen de la Ceremonia">
+                <p>La ceremonia tendrá lugar a las 14:30 en el Santuario de Torreciudad.</p>
             </div>
             <div class="separator"></div>
-            <div class="detail">
-                <h3>Banquete</h3>
-                <p>Bodega Laus</p>
-                <p>Hora: 2:00 PM</p>
-                <a href="https://maps.app.goo.gl/6MtgzuVkmZKo6w5j9" target="_blank">Ver en Google Maps</a>
+            <div class="section banquete">
+                <h2>Banquete</h2>
+                <img src="/Fotos/banquete.png" alt="Imagen del Banquete">
+                <p>El banquete se celebrará en la Bodega Laus.</p>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 Boda de Mónica & César. Todos los derechos reservados.</p>
-    </footer>
+        <!-- Itinerario Autobuses -->
+        <div class="section" id="itinerario-autobuses">
+            <a href="Fotos/descarga_el_itinerario.jpg" class="boton-reserva" download>Descarga el Itinerario</a>
+        </div>
 
-        <!-- Scripts -->
-    <script src="Barra de menu desplegable.js"></script>
+        <!-- Postboda -->
+        <div class="section" id="postboda">
+            <h2>Postboda</h2>
+            <img src="/Fotos/postboda.png" alt="Imagen de la Postboda">
+            <p>A las 12:30 habrá una visita por el Santuario y a las 13:15 se celebrará una misa.</p>
+            <p>Después de la misa, habrá un picoteo de despedida.</p>
+        </div>
+    </div>    
+    <script src="Barra_de_menu_desplegable.js"></script>
 </body>
+    <!-- Footer -->
+    <footer>
+        <p1>&copy; 2025 Boda de Mónica y César. Todos los derechos están reservados para César el Puto Amo.</p1>
+    </footer>
 </html>
