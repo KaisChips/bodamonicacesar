@@ -133,8 +133,27 @@
         </article>
         <h1 class="titulo-seccion">Otros Recomendados</h1>
         <p>Os dejamos link a la web de Torreciudad con otras opciones al rededor para hospedarse</p>
-        <button class="boton-reserva">Mapa de alojamientos cerca de Torreciudad</button>
+        <button class="boton-link">Mapa de alojamientos cerca de Torreciudad</button>
     </main>
+
+    <!-- Script para hacer el botón un enlace -->
+    <script>
+        // Selecciona el botón con la clase "boton-link"
+        const botonLink = document.querySelector('.boton-link');
+        
+        // Enlace al que se redirige al hacer clic
+        const link = "https://torreciudad.org/mapa-de-alojamientos-cerca-de-torreciudad/";
+        
+        // Añade un evento de clic para redirigir al enlace
+        botonLink.addEventListener('click', () => {
+            window.location.href = link;
+        });
+    </script>
+    </main>
+    
+    <footer>
+        <p1>&copy; 2025 Boda de Mónica y César. Todos los derechos están reservados para Cesar el Puto Amo.</p1>
+    </footer>
 
     <script src="Barra_de_menu_desplegable.js"></script>
 
@@ -162,8 +181,6 @@
         </div>
     </div>
     <script src="Consultar disponiblidad.js"></script>
+
 </body>
-<footer>
-    <p1>&copy; 2025 Boda de Mónica y César. Todos los derechos están reservados para Cesar el Puto Amo.</p1>
-</footer>
 </html>

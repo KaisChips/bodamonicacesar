@@ -21,6 +21,7 @@ body {
     gap: 40px;
 }
 
+/* Secciones */
 .section {
     padding: 50px 20px;
     border-bottom: 2px solid #ced4da; /* Línea más clara */
@@ -59,6 +60,7 @@ body {
     border-radius: 8px;
 }
 
+/* Tipografía */
 h2 {
     color: #212529;
     font-size: 2.2rem;
@@ -70,20 +72,7 @@ p {
     color: #212529;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .ceremonia-banquete {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .ceremonia, .banquete {
-        width: 100%;
-        border-right: none;
-        border-bottom: 2px solid #ced4da; /* Línea más clara */
-    }
-}
-
+/* Botones */
 .boton-reserva {
     background-color: #343a40;
     color: #fff;
@@ -171,8 +160,33 @@ p {
     background-color: #343a40;
 }
 
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #212529;
+    color: #fff;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
+    /* Estructura */
+    .ceremonia-banquete {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ceremonia, .banquete {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #ced4da;
+    }
+    
+    /* Navegación */
     .navbar {
         padding: 0 1rem;
     }
@@ -187,6 +201,7 @@ p {
         flex-direction: column;
         padding: 1rem;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 999;
     }
     
     .menu.show {
@@ -195,20 +210,40 @@ p {
     
     .menu-toggle {
         display: block;
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
     }
     
     .logo img {
         height: 2.5rem;
     }
-}
-/* Footer */
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #212529;
-    color: #fff;
-    font-size: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    
+    /* Footer y espaciado para evitar que oculte contenido */
+    footer {
+        position: fixed;
+        padding: 1.5rem;
+        bottom: 0;
+    }
+    
+    /* Asegurar que hay suficiente espacio para el footer */
+    body {
+        padding-bottom: 100px;
+    }
+    
+    /* Añadir más padding a la última sección para asegurar que no está cubierta por el footer */
+    .section:last-of-type {
+        padding-bottom: 80px;
+    }
+    
+    /* Asegurar que el contenedor tiene suficiente margen inferior */
+    .container {
+        margin-bottom: 80px;
+    }
+    
+    /* Asegurar que la sección postboda (si es la última) tiene suficiente padding */
+    .postboda {
+        padding-bottom: 80px;
+    }
 }
