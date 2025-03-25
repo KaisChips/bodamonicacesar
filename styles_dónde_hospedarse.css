@@ -279,12 +279,14 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-right: 2rem;
     }
     
     .imagen img {
         height: 250px;
         max-width: 100%;
         margin: 0 auto;
+        padding-right: 2rem;
     }
     
     .navbar {
@@ -353,8 +355,8 @@ footer {
     
     footer {
         position: fixed;
-        padding: 1.5rem;
         bottom: 0;
+        padding-right: 4rem;
     }
     
     /* Centrar imágenes en móvil */
